@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Bullet
+  - Banana
+  - Ground
+  - Kiwi
+  - Orange
+  - Trap
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Banana
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: terrain
+    uniqueID: 2553890759
+    locked: 0
+  - name: items
+    uniqueID: 529916925
+    locked: 0
+  - name: enemy
+    uniqueID: 3081899381
+    locked: 0
+  - name: player
+    uniqueID: 1583047531
+    locked: 0
