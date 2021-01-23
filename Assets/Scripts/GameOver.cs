@@ -7,7 +7,7 @@ public class GameOver : MonoBehaviour
 {
     public void Restart()
     {
-        SceneManager.LoadScene("friends");
+        SceneManager.LoadScene("fase_inicial");
     }
     public void ClickExit()      
     {

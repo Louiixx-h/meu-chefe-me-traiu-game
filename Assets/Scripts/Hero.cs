@@ -9,7 +9,6 @@ public class Hero : MonoBehaviour
 {
     public float moveSpeed;
     public float forceJump;
-    public float gravity;
     public Joystick joy;
     public GameObject player;
     public bool isGround;
@@ -17,6 +16,9 @@ public class Hero : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
     public ParticleSystem dust;
+    public GameObject bullet;
+    public Transform positionWeapon;
+    public bool flip;
     
     private Vector2 direction;
     private Rigidbody2D rb;
@@ -49,14 +51,16 @@ public class Hero : MonoBehaviour
         }
     }
     
-    void Flip()
+    public void Flip()
     {
         if(horizontal <=-0.777){
             Dust();
             transform.localScale = new Vector3(-1,1, 1);
+            flip = true; 
         } else {
             Dust();
             transform.localScale = new Vector3(1,1, 1);
+            flip = false;
         }
     }
 
@@ -72,6 +76,10 @@ public class Hero : MonoBehaviour
             Dust();
             player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * forceJump, ForceMode2D.Impulse);   
         }
+    }
+
+    public void Fire(){
+        Instantiate(bullet, positionWeapon.position, positionWeapon.rotation);
     }
 
     void Dust()
