@@ -8,6 +8,7 @@ public class CollectedFruits : MonoBehaviour
     public Text[] textFruits;
     public Text[] textFruitsMissionSucessful;
     public Text[] textFruitsGameOver;
+    public Text[] textmenuPause;
     private FruitPoint fruitPoint;
 
     private void Start() {
@@ -27,6 +28,7 @@ public class CollectedFruits : MonoBehaviour
             textFruits[0].text = fruitPoint.Banana.ToString();
             textFruitsMissionSucessful[0].text = fruitPoint.Banana.ToString();
             textFruitsGameOver[0].text = fruitPoint.Banana.ToString();
+            textmenuPause[0].text = fruitPoint.Banana.ToString();
             Destroy(fruit);
         } else if (tag == "Kiwi")
         {
@@ -34,6 +36,7 @@ public class CollectedFruits : MonoBehaviour
             textFruits[1].text = fruitPoint.Kiwi.ToString();
             textFruitsMissionSucessful[1].text = fruitPoint.Kiwi.ToString();
             textFruitsGameOver[1].text = fruitPoint.Kiwi.ToString();
+            textmenuPause[1].text = fruitPoint.Kiwi.ToString();
             Destroy(fruit);
         } else if (tag == "Orange")
         {
@@ -41,6 +44,7 @@ public class CollectedFruits : MonoBehaviour
             textFruits[2].text = fruitPoint.Orange.ToString();
             textFruitsMissionSucessful[2].text = fruitPoint.Orange.ToString();
             textFruitsGameOver[2].text = fruitPoint.Orange.ToString();
+            textmenuPause[2].text = fruitPoint.Orange.ToString();
             Destroy(fruit);
         }
     }

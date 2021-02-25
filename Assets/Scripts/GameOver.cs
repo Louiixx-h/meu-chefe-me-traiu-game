@@ -5,12 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    public string fase;
+    public string menu;
+
+    private void Start() {
+        Time.timeScale=0;
+    }
+
     public void Restart()
     {
-        SceneManager.LoadScene("fase_inicial");
+        SceneManager.LoadScene(fase);
+        Time.timeScale=1;
     }
     public void ClickExit()      
     {
-        Application.Quit();
+        SceneManager.LoadScene(menu);
+        Time.timeScale=1;
     }
 }

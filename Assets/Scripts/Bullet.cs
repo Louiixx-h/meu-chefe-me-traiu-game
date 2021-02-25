@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public float speed = 400f;
     private GameObject[] heroObj;
     private Hero hero;
+    private bool fired = false;
 
     private void Start() {
         heroObj = GameObject.FindGameObjectsWithTag("Player");
@@ -15,12 +16,16 @@ public class Bullet : MonoBehaviour
     }
 
     private void Update() {
-        
-        if (hero.flip == false)
+        if (!fired)
         {
-            rb.velocity = transform.right * speed * Time.deltaTime;
-        } else {
-            rb.velocity = new Vector2(-1 * speed * Time.deltaTime, rb.velocity.y);
+            if (!hero.flip)
+            {
+                rb.velocity = transform.right * speed * Time.deltaTime;
+                fired = !fired;
+            } else {
+                rb.velocity = new Vector2(-1 * speed * Time.deltaTime, rb.velocity.y);
+                fired = !fired;
+            }
         }
     }
 

@@ -28,6 +28,7 @@ public class Hero : MonoBehaviour
     
     void Start()
     {
+        Time.timeScale = 1;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }

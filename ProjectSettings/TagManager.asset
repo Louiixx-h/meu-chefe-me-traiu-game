@@ -12,6 +12,7 @@ TagManager:
   - Trap
   - Enemy
   - bullet
+  - Collider
   layers:
   - Default
   - TransparentFX

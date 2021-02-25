@@ -122,7 +122,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18fdac03e77f180df83d944f7cd15d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laser: {fileID: 451941318977990607, guid: 3d9f8d98096aa0f9da317138dfbde0f2, type: 3}
 --- !u!1101 &1804267983562733830
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
